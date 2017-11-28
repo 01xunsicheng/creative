@@ -1,0 +1,104 @@
+<div class="header">
+	<div class="nav_top">
+		<div class="mycontain">
+			<div class="left">
+				科技型制造业中小企业的协同创新综合服务平台
+			</div>
+			<div class="right t_right">
+				
+				<ul>
+					<li>
+						<a href="help.html">帮助中心</a>
+					</li>
+
+					<li>
+						<a href="register.html">注册</a>
+						
+					</li>
+					<li class="login relative m_r_20">
+						<a href="login.html">登录</a>
+						<div class="kk"></div>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="left logo">
+			<a href="index.html" rel="index.html"><img src="img/logo.png" width="90" /></a>
+		</div>
+		<div class="left">
+			<div class="relative" id="second-nav">
+				<span>需求大厅</span>
+				<div id="second-menu">
+				<ul class="menu" >
+				<li>
+					<a href="service.html" rel="service.html">服务大厅</a>
+				</li>
+				<li>
+					<a href="demand.html" rel="demand.html">需求大厅</a>
+				</li>
+				<li>
+					<a href="creative.html" rel="creative.html">创新方法</a>
+				</li>
+				<li>
+					<a href="news.html" rel="news.html">资讯活动</a>
+				</li>
+				<li>
+					<a href="anli.html" rel="anli.html">成果案例</a>
+				</li>
+			</ul>
+			</div>
+			</div>
+			
+		</div>
+		<!--<div class="left m_l_30">
+				<ul class="menu" >
+				<li class="mysearch">
+					<label for="search"><i class="icon23 icon"></i></label>
+					<input type="text" name="search" id="search" value="" />
+				</li>
+				</ul>
+			</div>-->
+		<div class="right nav_right">
+			<ul>
+				<li>
+					<a href="submitdemand.html">发布需求</a>
+				</li>
+				<li class="m_l_10">
+					<a href="cwfys.html">成为服务商</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+	$(function() {
+		$(".mysearch input").hide();
+		$(".mysearch").mouseover(function() {
+			$(".mysearch input").show();
+			
+		}).mouseout(function(){
+			 $(".mysearch input").hide();
+		});
+		$(".icon23").bind("click",function(){
+				alert("搜索")
+			});
+			
+//导航高亮
+var urlstr = location.href;
+  var urlstatus=false;
+  $("#menu a").each(function () {
+    if ((urlstr + '/').indexOf($(this).attr('rel')) > -1&&$(this).attr('rel')!='') {
+      $(this).addClass('cur'); urlstatus = true;
+    } else {
+      $(this).removeClass('cur');
+    }
+  });
+ // if (!urlstatus) {$("#menu a").eq(0).addClass('cur'); }
+  
+  
+	})
+</script>

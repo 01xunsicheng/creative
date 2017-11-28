@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/globle.js"></script>
+<style type="text/css">
+	.lo-header {
+    border-bottom: 1px solid #f6f6f7;
+    -webkit-box-shadow: 0px 0px 0px #f5f7f7;
+    -moz-box-shadow: 0px 0px 0px #f5f7f7;
+    box-shadow: 0px 0px 0px #f5f7f7;
+    height: 70px;
+    line-height: 70px;
+    background: #fff;
+}
+</style>
+	</head>
+
+	<body class="">
+		<div class="mylogin">
+		<div class="lo-header">
+			<div class="content">
+				<div class="left">
+					<a href="index.html"><img src="img/logo.png" /></a>
+				</div>
+				<div class="right">
+					还没有账号？
+					<a href="register.html">免费注册</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="lo-content">
+			<div class="content">
+				<div class="right m_t_60 lo_box" style="position: relative;right:27%">
+					<p class="m_t_40 m_b_40 lname t_center">登录</p>
+					<div class="lo_box_con">
+						<form class="m_b_20 registerform">
+							<div class="input-row">
+								<label class="label"><i class="icon45 icon"></i></label>
+								<input type="text" class="inputxt" placeholder="请输入您的手机号码" nullmsg="请输入正确的手机号！">
+							</div>
+							<div class="input-row m_t_20">
+								<label class="label"><i class="icon46 icon"></i></label>
+								<input type="text" class="inputxt" placeholder="请输入您的密码" nullmsg="请输入正确的密码！">
+							</div>
+							<p class="tijiao m_t_30">
+								<input type="submit" name="" id="" value="登录" />
+							</p>
+							<div class="input-row-box m_t_20">
+								<div class="left">
+									<input type="checkbox" class="count" name="count" id="count">
+									<label class="label" for="count">记住账号</label>
+								</div>
+								<div class="right">
+									<a href="find.html">忘记密码？</a>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		</div>
+		<script type="text/javascript" src="js/Validform_v5.3.2.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				var valid = $(".registerform").Validform({ //指明是哪一表单需要验证,名称需加在form表单上;
+					tiptype: 3,
+					label: ".label",
+					showAllError: true,
+					datatype: {
+						"zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/,
+						"Aa1": /^[A-Za-z0-9]+$/
+					},
+					ajaxPost: true
+				});
+
+				//通过$.Tipmsg扩展默认提示信息;
+				//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
+				valid.tipmsg.w["zh1-6"] = "请输入1到6个中文字符！"; //可以自定义一些消息提示,zh1-6是自定义的datatype
+				valid.addRule([{
+						ele: ".inputxt:eq(0)",
+						datatype: "m",
+						// ajaxurl:"ajax_post.php?/checkname/name=$_GET['name']"//可以写方法检测中文名是否已经存在
+					},
+					{
+						ele: ".inputxt:eq(1)",
+						datatype: "*4-20"
+					}
+				]);
+				
+			})
+		</script>
+	</body>
+
+</html>

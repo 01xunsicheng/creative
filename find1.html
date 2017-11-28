@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>找回密码</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/globle.js"></script>
+		<style type="text/css">
+			.Validform_checktip.Validform_wrong {
+				color: #db4200;
+				position: absolute;
+				left: 490px;
+				top: 15px;
+				background: url(img/icon_03.png) no-repeat center left;
+				padding-left: 20px;
+			}
+			
+			.Validform_checktip.Validform_right {
+				position: absolute;
+				left: 490px;
+				top: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="lo-header">
+			<div class="content">
+				<div class="left">
+					<a href="index.html"><img src="img/logo.png" /></a>
+				</div>
+				<div class="right">
+					已有账号？
+					<a href="login.html">登录</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="re-content">
+			<div class="content">
+				<div class="m_t_60 re_box">
+					<p class="m_t_40 m_b_40 lname t_center">找回密码</p>
+					<!--进度调开始-->
+					<div class="jd">
+						<div class="jd_state">
+							<ul>
+								<li class="active">
+									<p class="num">1</p>
+									<p class="info">填写账号</p>
+								</li>
+								<li class="active">
+									<p class="num">2</p>
+									<p class="info">设置新密码</p>
+								</li>
+								<li>
+									<p class="num">3</p>
+									<p class="info">设置成功</p>
+								</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+						<div class="jd_tiao">
+							<div class="jd_xtiao" style="width: 50%;"></div> 
+						</div>
+					</div>
+					<!--进度条结束-->
+					<!--中间区域开始-->
+					<div class="find">
+						<form class="m_b_20 findform register">
+							<div class="re-input-row m_t_20">
+								<label class="label">新密码</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label">确认密码</label>
+									<input type="text" class="inputxt" placeholder="">
+							</div>
+							<p class="re-tijiao m_t_30">
+								<input type="submit" name="" id="" value="提交" />
+							</p>
+						</form>
+					</div>
+					<!--中间区域结束-->
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/Validform_v5.3.2.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+
+				//个人注册实时验证
+				var valid = $(".findform").Validform({ //指明是哪一表单需要验证,名称需加在form表单上;
+					tiptype: 3,
+					label: ".label",
+					showAllError: true,
+					datatype: {
+						"zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/,
+						"Aa1": /^[A-Za-z0-9]+$/
+					},
+					ajaxPost: true
+				});
+
+				//通过$.Tipmsg扩展默认提示信息;
+				//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
+				valid.tipmsg.w["zh1-6"] = "请输入1到6个中文字符！"; //可以自定义一些消息提示,zh1-6是自定义的datatype
+				valid.addRule([{
+						ele: ".inputxt:eq(0)",
+						datatype: "*4-22"
+						// ajaxurl:"ajax_post.php?/checkname/name=$_GET['name']"//可以写方法检测中文名是否已经存在
+					},
+					{
+						ele: ".inputxt:eq(1)",
+						datatype: "*4-22"
+					}
+				]);
+				
+			})
+				
+		</script>
+	</body>
+
+</html>

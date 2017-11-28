@@ -1,0 +1,142 @@
+
+table{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.clearfix{
+    zoom:1;
+}
+.clearfix:after{
+    content:".";
+    display:block;
+    width:0;
+    height:0;
+    visibility:hidden;
+    clear: both;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:left;
+}
+.date{
+    position:relative;
+}
+.date-check{
+font-size: 14px;
+    width:225px;
+    height:40px;
+    line-height:40px;
+    border: 1px solid #d2d5d6;
+    color: #a0a2a3;
+    padding:0 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+}
+
+.date-check::-webkit-input-placeholder{ /*WebKit browsers*/
+
+font-size: 14px;
+
+}
+
+.date-check::-moz-input-placeholder{ /*Mozilla Firefox*/
+
+font-size: 14px;
+
+}
+
+.date-check::-ms-input-placeholder{ /*Internet Explorer*/ 
+
+font-size: 14px;
+
+}
+.date-list{
+    display:none;
+    position:absolute;
+    top:42px;
+    padding-top:10px;
+    background: #fff;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    overflow:hidden;
+    border:1px solid;
+   border: 1px solid #f0f1f1;
+    z-index: 999;
+}
+.data-header{
+    margin-bottom:4px;
+    padding: 0 5px;
+}
+.data-header .fl{
+    margin-right:5px;
+}
+.data-header .fl,.data-header .fr{
+    cursor:pointer;
+}
+.data-header select{
+    padding: 2px 0;
+    vertical-align:top;
+    width: auto;
+    height: auto !important;
+}
+
+.data-header-right{
+    margin-right:8px;
+}
+.data-header-left,.data-header-right{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #f0f1f1;
+    line-height: 18px;
+}
+.today{
+    padding:2px 5px;
+    border:1px solid #f0f1f1;
+    border-radius:5px;
+    background:#ccc;
+    color:#fff;
+    font-size:12px;
+    *width:24px;
+    *height:16px;
+    *line-height:16px;
+}
+.date-list,.date-list table{
+    width:216px;
+}
+
+.date-list thead{
+    background:#199bd8;
+}
+.date-list th{
+    padding:2px;
+    color:#fff;
+    border:1px solid #f0f1f1;
+    font-size: 14px;
+    font-weight: normal;
+}
+.date-list td{
+    border:1px solid #f0f1f1;
+    padding:2px 0;
+    text-align:center;
+    font-size: 12px;
+}
+.date-list td:hover{
+    background:#ccc;
+    color:#fff;
+}
+.date-list td.current{
+    background:#199bd8;
+    color:#fff;
+}
+
+
+
+.date-error .date-check{
+    border:1px solid red;
+}

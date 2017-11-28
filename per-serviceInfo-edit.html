@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>个人中心-修改服务信息</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/globle.js"></script>
+		<style type="text/css">
+			/*.Validform_checktip.Validform_wrong {
+			right: 20px;
+			}*/
+			
+			.Validform_checktip.Validform_right {
+			right: 20px;
+			}
+			.re-input-row label{
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--header start-->
+		<div class="header_content">
+
+		</div>
+		<!--header end-->
+		<!--content start-->
+		<div class="help m_t_30">
+			<div class="content">
+				<div class="left help_left">
+					<div class="h_l_con" id="mymenu">
+						<ul>
+							<li>
+								<a class="" href="">个人中心</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="" class="current"><i class="icon38 icon m_r_10"></i>基本信息</a>
+									</li>
+									<li>
+										<a href="per-serviceInfo.html"><i class="icon38 icon m_r_10"></i>服务信息</a>
+									</li>
+									<li>
+										<a href="per-changepassword.html"><i class="icon38 icon m_r_10"></i>密码修改</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">需求订单管理</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="" class=""><i class="icon38 icon m_r_10"></i>我发布的需求</a>
+									</li>
+									<li>
+										<a href=""><i class="icon38 icon m_r_10"></i>我申请的服务</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">服务订单管理</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="" class=""><i class="icon38 icon m_r_10"></i>我的服务信息</a>
+									</li>
+									<li>
+										<a href=""><i class="icon38 icon m_r_10"></i>我承接的服务</a>
+									</li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<div class="right help_right t_left" id="mycontent">
+					<p class="name">服务信息</p>
+					<form class="m_b_20 per perform">
+						<div class="re-input-row re-input-row-add m_t_40">
+							<label class="label" style="vertical-align: top;">公司简介</label>
+							<textarea name="" class="textarea inputxt" style="height: 125px;" rows="" cols="" 
+								placeholder="企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简介企业简。"></textarea>
+						</div>
+						<div class="re-input-row re-input-row-add m_t_10">
+							<label class="label">服务领域</label>
+							<input type="text" class="inputxt" placeholder="某某某企业名称">
+						</div>
+						<div class="re-input-row re-input-row-add m_t_10">
+							<label class="label">服务价值</label>
+							<input type="text" class="inputxt" placeholder="满足了对象什么什么什么的">
+						</div>
+						<div class="re-input-row re-input-row-add m_t_10">
+							<label class="label">优势</label>
+							<input type="text" class="inputxt" placeholder="什么什么什优势">
+						</div>
+						<div class="re-input-row re-input-row-add m_t_10">
+							<label class="label">服务模式</label>
+							<input type="text" class="inputxt" placeholder="什么什么什模式">
+						</div>
+						<p class="per-tijiao m_t_30">
+							<input type="submit" name="" id="" value=" 保存 "  style="width: 120px;"/>
+						</p>
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--content end-->
+		<!--footer start-->
+		<div class="footer_content"></div>
+		<!--footer end-->
+		<script type="text/javascript" src="js/Validform_v5.3.2.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var valid = $(".perform").Validform({ //指明是哪一表单需要验证,名称需加在form表单上;
+					tiptype: 3,
+					label: ".label",
+					showAllError: true,
+					datatype: {
+						"zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/,
+						"Aa1": /^[A-Za-z0-9]+$/
+					},
+					ajaxPost: true
+				});
+
+				//通过$.Tipmsg扩展默认提示信息;
+				//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
+				valid.tipmsg.w["zh1-6"] = "请输入1到6个中文字符！"; //可以自定义一些消息提示,zh1-6是自定义的datatype
+				valid.addRule([{
+						ele: ".inputxt:eq(0)",
+						datatype: "*4-12"
+					},
+					{
+						ele: ".inputxt:eq(1)",
+						datatype: "*4-12"
+					},
+					{
+						ele: ".inputxt:eq(2)",
+						datatype: "*4-12"
+					},
+					{
+						ele: ".inputxt:eq(3)",
+						datatype: "*4-12"
+					},
+					{
+						ele: ".inputxt:eq(4)",
+						datatype: "z2-4"
+					}
+				]);
+			})
+			//验证码倒计时
+			var countdown = 60;
+
+			function settime(val) {
+				if(countdown == 0) {
+					val.removeAttribute("disabled");
+					val.value = "获取验证码";
+					countdown = 60;
+				} else {
+					val.setAttribute("disabled", true);
+					val.value = "重新发送(" + countdown + ")";
+					countdown--;
+				}
+				setTimeout(function() {
+					settime(val)
+				}, 1000)
+			}
+		</script>
+	</body>
+
+</html>

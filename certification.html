@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>专家认证</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/lrtk.css" />
+		<link rel="stylesheet" href="css/double-date.css" />
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/globle.js"></script>
+		<style type="text/css">
+			.Validform_checktip.Validform_wrong,
+			.Validform_checktip.Validform_right {
+				left: 510px;
+				top: 35px;
+			}
+			
+			#zhuanjianengli .Validform_checktip.Validform_wrong,
+			#zhuanjianengli .Validform_checktip.Validform_right {
+				left: 700px;
+				top: 35px;
+			}
+			
+					.mydata1  .Validform_checktip.Validform_wrong,.mydata1 .Validform_checktip.Validform_right{
+						left: 250px;
+				top: 15px;
+					}
+			
+			select {
+				width: 490px !important;
+			}
+			
+			.date select {
+				width: auto !important;
+			}
+			
+			#zhuanjianengli input {
+				width: 680px !important;
+			}
+			
+			#zhuanjianengli select {
+				width: 690px !important;
+			}
+			
+			#zhuanjianengli textarea {
+				width: 685px !important;
+				font-size: 14px;
+			}
+	
+		</style>
+	</head>
+
+	<body>
+		<!--header start-->
+		<div class="header_content"></div>
+		<!--header end-->
+		<!--content start-->
+		<div class="content">
+			<form class="m_b_20 fwsform certification">
+				<p class="fwname m_t_30"><i class="icon67 icon m_r_10"></i>个人信息</p>
+				<div class="fws-input-row m_t_20">
+					<label class="label"><i class="icon52 icon m_r_5"></i>个人照片</label>
+				</div>
+				<div class="m_t_10">
+
+					<div id="preview">
+						<img class="imghead" src='img/nopic.png'>
+					</div>
+					<p class="uploadanniu">
+						<input type="file" onchange="previewImage(this)" class="btn-file" />
+						<a href="javascript:void(0)" class="btn-change mybtn">修改照片</a>
+					</p>
+					<div class="clear"></div>
+				</div>
+
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>姓名</label>
+					<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写姓名！">
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>性别</label>
+					<div class="sex">
+						<span class="active"><i class="icon icon65 m_r_10"></i>男</span>
+						<span><i class="icon icon66 m_r_10"></i>女</span>
+					</div>
+				</div>
+				<div class=" m_t_15">
+					<div class="fws-input-row">
+						<label class="label"><i class="icon52 icon m_r_5" ></i>出生日期</label>
+					</div>
+					<!--日期开始-->
+					<div class="outer m_t_10">
+						<div class="date date1 left mydata1" id="from" style="width: 500px;">
+							<input type="text" class="date-check" placeholder="起始日期" datatype="*" nullmsg="请填写职位！" errormsg="请填写职位！"/>
+						</div>
+					</div>
+					<!--日期结束-->
+					<div class="clear"></div>
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>国籍</label>
+					<select name="province" datatype="*" nullmsg="请选择国籍！" errormsg="请选择国籍！" style="width: 360px;">
+						<option value="">国籍</option>
+						<option value="1">中国</option>
+					</select>
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>学历</label>
+					<select name="province" datatype="*" nullmsg="请选择学历！" errormsg="请选择学历！" style="width: 360px;">
+						<option value="">学历</option>
+						<option value="1">本科</option>
+					</select>
+				</div>
+				<p class="fwname m_t_30"><i class="icon68 icon m_r_10"></i>专家能力</p>
+
+				<div id="zhuanjianengli">
+					<div class="fws-input-row m_t_15">
+						<label class="label"><i class="icon52 icon m_r_5"></i>技术领域</label>
+						<select name="province" datatype="*" nullmsg="请选择技术领域！" errormsg="请选择技术领域！" style="width: 360px;">
+							<option value="">打架</option>
+							<option value="1">斗殴</option>
+						</select>
+					</div>
+					<div class="fws-input-row m_t_15">
+						<label class="label"><i class="icon52 icon m_r_5"></i>研究方向或擅长领域</label>
+						<textarea name="" rows="" cols="" class="textarea" datatype="*" nullmsg="请填写研究方向或擅长领域！"></textarea>
+					</div>
+					<div class="fws-input-row m_t_15">
+						<label class="label"><i class="icon52 icon m_r_5"></i>曾服务过的项目介绍</label>
+						<textarea name="" rows="" cols="" class="textarea" placeholder="请填写与平台相关服务类型的项目实例" datatype="*" nullmsg="请填写曾服务过的项目介绍！"></textarea>
+					</div>
+					<div class="fws-input-row m_t_15">
+						<label class="label m_l_10">曾经获得的荣誉或奖励</label>
+						<input type="text" class="" placeholder="" datatype="m" nullmsg="请填写曾经获得的荣誉或奖励！">
+					</div>
+
+				</div>
+
+				<p class="fwname m_t_30"><i class="icon69 icon m_r_10"></i>联系方式</p>
+				<div class="fws-input-row m_t_15">
+					<label class="label m_l_10"><i class="icon52 icon m_r_5"></i>手机号码</label>
+					<input type="text" class="" placeholder="" datatype="m" nullmsg="请填写电子邮箱！">
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label m_l_10"><i class="icon52 icon m_r_5"></i>电子邮箱</label>
+					<input type="text" class="" placeholder="" datatype="e" nullmsg="请填写电子邮箱！">
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label m_l_10">微信</label>
+					<input type="text" class="" placeholder="（建议留下，以便建立专家服务群组）">
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label m_l_10">qq</label>
+					<input type="text" class="" placeholder="">
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label m_l_10">通讯地址</label>
+					<input type="text" class="" placeholder="">
+				</div>
+				<p class="fwname m_t_30"><i class="icon70 icon m_r_10"></i>单位信息</p>
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>工作单位</label>
+					<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写工作单位！" errormsg="请填写工作单位！">
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>职称</label>
+					<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写职称！" errormsg="请填写职称！">
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>职位</label>
+					<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写职位！" errormsg="请填写职位！">
+				</div>
+				<p class="fwname m_t_30"><i class="icon71 icon m_r_10"></i>工作经历</p>
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>工作单位</label>
+					<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写工作单位！" errormsg="请填写工作单位！">
+				</div>
+				<div class="fws-input-row m_t_15">
+					<label class="label"><i class="icon52 icon m_r_5"></i>职位</label>
+					<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写职位！" errormsg="请填写职位！">
+				</div>
+				<div class=" m_t_15">
+					<div class="fws-input-row">
+						<label class="label"><i class="icon52 icon m_r_5" ></i>在职时间</label>
+					</div>
+					<!--日期开始-->
+					<div class="outer m_t_10">
+						<div class="date date1 left " id="from">
+							<input type="text" class="date-check" placeholder="起始日期"  />
+						</div>
+						<div class="date left m_l_20 mydata1" id="to" style="width: 500px;">
+							<input type="text" class="date-check" placeholder="结束日期" datatype="*" nullmsg="请填写结束日期！" errormsg="请填写结束日期！"/>
+						</div>
+					</div>
+					<!--日期结束-->
+					<div class="clear"></div>
+				</div>
+
+				<div class="fws-input-row m_t_15">
+					<label class="label">工作内容</label>
+					<input type="text" class="" placeholder="">
+				</div>
+
+				<div class="m_t_30" style="width: 480px;">
+					<div class="left">
+						<div class="fwname"><i class="icon71 icon m_r_10"></i>教育经历</div>
+					</div>
+					<div class="right addschool m_t_10">
+						<a href="javascript:void(0)" class="size14 color1"><i class="icon62 icon m_r_10"></i>新增</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div id="school_content">
+					<div class="fws-input-row m_t_15">
+						<label class="label"><i class="icon52 icon m_r_5"></i>学校名称</label>
+						<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写学校名称！" errormsg="请填写学校名称！">
+					</div>
+					<div class="fws-input-row m_t_15">
+						<label class="label"><i class="icon52 icon m_r_5"></i>学历</label>
+						<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写学历！" errormsg="请填写学历！">
+					</div>
+					<div class=" m_t_15">
+						<div class="fws-input-row">
+							<label class="label"><i class="icon52 icon m_r_5" ></i>毕业时间</label>
+						</div>
+						<!--日期开始-->
+						<div class="outer m_t_10">
+							<div class="date date1 left mydata1" id="from" style="width: 500px;">
+								<input type="text" class="date-check" placeholder="起始日期"  datatype="*" nullmsg="请填写起始日期！"/>
+							</div>
+						</div>
+						<!--日期结束-->
+						<div class="clear"></div>
+					</div>
+					<div class="fws-input-row m_t_15">
+						<label class="label"><i class="icon52 icon m_r_5"></i>专业</label>
+						<input type="text" class="" placeholder="" datatype="*" nullmsg="请填写专业！" errormsg="请填写专业！">
+					</div>
+				</div>
+				<p class="fws-tijiao m_t_30">
+					<input type="submit" name="" id="" value="提交" />
+				</p>
+			</form>
+		</div>
+		<!--content end-->
+		<!--footer start-->
+		<div class="footer_content"></div>
+		<!--footer end-->
+		<script type="text/javascript" src="js/file.js"></script>
+		<script type="text/javascript" src="js/Validform_v5.3.2.js"></script>
+		<script type="text/javascript" src="js/double-date.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				var school_html = $("#school_content").html();
+
+				$(".addschool").click(function() {
+					$("#school_content").append(school_html);
+
+					valid();
+					datas();
+
+				});
+				//sex
+				$(".sex span").click(function() {
+					$(this).addClass("active").siblings("span").removeClass("active");
+				})
+
+				valid();
+
+			});
+
+			function valid() {
+				var valid = $(".certification").Validform({ //指明是哪一表单需要验证,名称需加在form表单上;
+					tiptype: 3,
+					label: ".label",
+					showAllError: true,
+					datatype: {
+						"zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/,
+						"Aa1": /^[A-Za-z0-9]+$/
+					},
+					ajaxPost: true
+				});
+
+				//通过$.Tipmsg扩展默认提示信息;
+				//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
+				valid.tipmsg.w["zh1-6"] = "请输入1到6个中文字符！"; //可以自定义一些消息提示,zh1-6是自定义的datatype
+				valid.addRule([
+
+				]);
+			}
+		</script>
+	</body>
+
+</html>

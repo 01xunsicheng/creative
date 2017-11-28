@@ -1,0 +1,143 @@
+<div class="header_zhanwei">
+</div>
+<div class="header">
+	<div class="nav_top">
+		<div class="mycontain">
+			<div class="left">
+				科技型制造业中小企业的协同创新综合服务平台
+			</div>
+			<div class="right t_right">
+
+				<ul>
+					<li>
+						<a href="help.html">帮助中心</a>
+					</li>
+
+					<li class="m_l_10">
+						<a href="register.html">注册</a>
+					</li>
+					<!--<li class="login relative m_r_10 " id="mylogin">
+						<a href="login.html" >登录</a>
+						<div class="kk"></div>
+					</li>-->
+					<li class="login relative m_r_10 " id="mylogin">
+						<a href="javascript:void(0)" >199989898e98989<i class="icon49 icon m_l_10"></i></a>
+						<div class="kk"></div>
+						<!--下拉框-->
+						<div class="kkbox">
+							<ul>
+								<li><a href="">个人中心</a></li>
+								<li><a href="">需求订单管理</a></li>
+								<li><a href="">服务订单管理</a></li>
+							</ul>
+						</div>
+						 <!--下拉框结束-->
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="left logo">
+			<a href="index.html" rel="index.html"><img src="img/logo.png" width="90" /></a>
+		</div>
+		<div class="left" id="menu">
+			<ul class="menu">
+				<li>
+					<a href="service.html" rel="service.html">服务大厅</a>
+				</li>
+				<li>
+					<a href="demand.html" rel="demand.html">需求大厅</a>
+				</li>
+				<li>
+					<a href="creative.html" rel="creative.html">创新方法</a>
+				</li>
+				<li>
+					<a href="news.html" rel="news.html">资讯活动</a>
+				</li>
+				<li>
+					<a href="anli.html" rel="anli.html">成果案例</a>
+				</li>
+				<li class="mysearch1">
+					<i class="icon23 icon"></i>
+				</li>
+				<li class="mysearch">
+					<label for="search"><i class="icon23 icon btnsearch"></i></label>
+					<input type="text" name="search" id="search" value="" />
+				</li>
+			</ul>
+		</div>
+		<div class="right nav_right">
+			<ul>
+				<li>
+					<a href="submitdemand.html">发布需求</a>
+				</li>
+				<li class="m_l_10">
+					<a href="cwfys.html">成为服务商</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+	$(function() {
+		$(".mysearch").hide();
+		$(".mysearch1").click(function() {
+			$(".mysearch").show();
+			$(this).hide();
+			//input自动获取焦点
+			$(".mysearch").find("input[name=search]").focus();
+		});
+
+
+
+
+		$(".btnsearch").bind("click", function() {
+			alert("搜索");
+		});
+
+		$("#search").blur(function() {
+			$(".mysearch1").show();
+			$(".mysearch").hide();
+		
+		});
+		//		.mouseout(function() {
+		//			$(".mysearch input").hide();
+		//		});
+
+		//导航高亮
+		var urlstr = location.href;
+		var urlstatus = false;
+		$("#menu a").each(function() {
+			if((urlstr + '/').indexOf($(this).attr('rel')) > -1 && $(this).attr('rel') != '') {
+				$(this).addClass('cur');
+				urlstatus = true;
+			} else {
+				$(this).removeClass('cur');
+			}
+		});
+		// if (!urlstatus) {$("#menu a").eq(0).addClass('cur'); }
+		//判断浏览器
+		var DEFAULT_VERSION = 8;
+		var ua = navigator.userAgent.toLowerCase();
+		var isIE = ua.indexOf("msie") > -1;
+		var safariVersion;
+		if(isIE) {
+			safariVersion = ua.match(/msie ([\d.]+)/)[1];
+			var sa = parseInt(safariVersion);
+			if(safariVersion <= DEFAULT_VERSION) {
+				//alert("ie8以下")
+				window.location.href = "browser.html"
+
+			} else {
+				//alert("ie8以上")
+
+			}
+		} else {
+			// alert("非ie")
+
+		}
+	})
+</script>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/globle.js"></script>
+		<style type="text/css">
+			.Validform_checktip.Validform_wrong {
+				color: #db4200;
+				position: absolute;
+				left: 490px;
+				top: 15px;
+				background: url(img/icon_03.png) no-repeat center left;
+				padding-left: 20px;
+			}
+			
+			.Validform_checktip.Validform_right {
+				position: absolute;
+				left: 490px;
+				top: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="lo-header">
+			<div class="content">
+				<div class="left">
+					<a href="index.html"><img src="img/logo.png" /></a>
+				</div>
+				<div class="right">
+					已有账号？
+					<a href="login.html">登录</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="re-content">
+			<div class="content">
+				<div class="m_t_60 re_box">
+					<p class="m_t_40 m_b_40 lname t_center">注册</p>
+					<div class="re_box_con">
+
+						<div class="re-input-row xzsf">
+							<label class="label"><i class="icon52 icon m_r_5"></i>选择身份</label>
+							<span class="active">个人</span><span>企业</span>
+						</div>
+						<!--个人-->
+						<form class="m_b_20 registerform register">
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>手机号码</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>验证码</label>
+								<input type="text" class="inputxt" placeholder="">
+								<input type="button" class="yzm " id="btn" value="发送验证码" onclick="settime(this)" />
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>创建密码</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>确认密码</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>所在地区</label>
+								<select name="province" datatype="*" nullmsg="请选择所在省！" errormsg="请选择所在省！">
+									<option value="">请选择省</option>
+									<option value="1">陕西省</option>
+								</select>
+								<select name="province" class="m_l_20" datatype="*" nullmsg="请选择所在城市！" errormsg="请选择所在城市！">
+									<option value="">请选择市</option>
+									<option value="1">西安市</option>
+								</select>
+							</div>
+							<p class="re-tijiao m_t_30">
+								<input type="submit" name="" id="" value="注册" />
+							</p>
+						</form>
+						<!--企业-->
+						<form class="m_b_20 registerform1 register">
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>企业名称</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>联系人</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>手机号码</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>验证码</label>
+								<input type="text" class="inputxt" placeholder="">
+								<input type="button" class="yzm " id="btn" value="发送验证码" onclick="settime(this)" />
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>创建密码</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>确认密码</label>
+								<input type="text" class="inputxt" placeholder="">
+							</div>
+							<div class="re-input-row m_t_20">
+								<label class="label"><i class="icon52 icon m_r_5"></i>所在地区</label>
+								<select name="province" datatype="*" nullmsg="请选择所在省！" errormsg="请选择所在省！">
+									<option value="">请选择省</option>
+									<option value="1">陕西省</option>
+								</select>
+								<select name="" class="m_l_20" datatype="*" nullmsg="请选择所在城市！" errormsg="请选择所在城市！">
+									<option value="">请选择市</option>
+									<option value="1">西安市</option>
+								</select>
+							</div>
+							<p class="re-tijiao m_t_30">
+								<input type="submit" name="" id="" value="注册" />
+							</p>
+						</form>
+
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/Validform_v5.3.2.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				//选择身份
+				$(".register").eq(0).show().siblings(".register").hide();
+				$(".xzsf span").click(function() {
+					var index = $(this).index();
+					console.log(index);
+					$(this).addClass("active").siblings("span").removeClass("active");
+					$(".register").eq(index - 1).show().siblings(".register").hide();
+				});
+
+				//个人注册实时验证
+				var valid = $(".registerform").Validform({ //指明是哪一表单需要验证,名称需加在form表单上;
+					tiptype: 3,
+					label: ".label",
+					showAllError: true,
+					datatype: {
+						"zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/,
+						"Aa1": /^[A-Za-z0-9]+$/
+					},
+					ajaxPost: true
+				});
+
+				//通过$.Tipmsg扩展默认提示信息;
+				//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
+				valid.tipmsg.w["zh1-6"] = "请输入1到6个中文字符！"; //可以自定义一些消息提示,zh1-6是自定义的datatype
+				valid.addRule([{
+						ele: ".inputxt:eq(0)",
+						datatype: "m",
+						// ajaxurl:"ajax_post.php?/checkname/name=$_GET['name']"//可以写方法检测中文名是否已经存在
+					},
+					{
+						ele: ".inputxt:eq(1)",
+						datatype: "*4-6"
+					},
+					{
+						ele: ".inputxt:eq(2)",
+						datatype: "*4-20"
+					},
+					{
+						ele: ".inputxt:eq(3)",
+						datatype: "*4-20"
+					}
+				]);
+
+				//企业实时验证
+				//个人注册实时验证
+				var valid = $(".registerform1").Validform({ //指明是哪一表单需要验证,名称需加在form表单上;
+					tiptype: 3,
+					label: ".label",
+					showAllError: true,
+					datatype: {
+						"zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/,
+						"Aa1": /^[A-Za-z0-9]+$/
+					},
+					ajaxPost: true
+				});
+
+				//通过$.Tipmsg扩展默认提示信息;
+				//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
+				valid.tipmsg.w["zh1-6"] = "请输入1到6个中文字符！"; //可以自定义一些消息提示,zh1-6是自定义的datatype
+				valid.addRule([{
+						ele: ".inputxt:eq(0)",
+							datatype: "*4-20"
+						// ajaxurl:"ajax_post.php?/checkname/name=$_GET['name']"//可以写方法检测中文名是否已经存在
+					},
+					{
+						ele: ".inputxt:eq(1)",
+						datatype: "*1-8"
+					},
+					{
+						ele: ".inputxt:eq(2)",
+						datatype: "m"
+					},
+					{
+						ele: ".inputxt:eq(3)",
+						datatype: "*4-6"
+					},
+					{
+						ele: ".inputxt:eq(4)",
+						datatype: "*4-20"
+					},
+					{
+						ele: ".inputxt:eq(5)",
+						datatype: "*4-20"
+					}
+				]);
+
+			})
+			
+				//验证码倒计时
+				var countdown = 60;
+
+				function settime(val) {
+					if(countdown == 0) {
+						val.removeAttribute("disabled");
+						val.value = "获取验证码";
+						countdown = 60;
+					} else {
+						val.setAttribute("disabled", true);
+						val.value = "重新发送(" + countdown + ")";
+						countdown--;
+					}
+					setTimeout(function() {
+						settime(val)
+					}, 1000)
+				}
+		</script>
+	</body>
+
+</html>

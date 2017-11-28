@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>个人中心-我承接的服务</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/pagination.css" />
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/globle.js"></script>
+		<style type="text/css">
+			/*.Validform_checktip.Validform_wrong {
+			right: 20px;
+			}*/
+			
+			.Validform_checktip.Validform_right {
+				right: 20px;
+			}
+			
+			.re-input-row label {
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--header start-->
+		<div class="header_content">
+
+		</div>
+		<!--header end-->
+		<!--content start-->
+		<div class="help m_t_30">
+			<div class="content">
+				<div class="left help_left">
+					<div class="h_l_con" id="mymenu">
+						<ul>
+							<li>
+								<a class="" href="">个人中心</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="" class=""><i class="icon38 icon m_r_10"></i>基本信息</a>
+									</li>
+									<li>
+										<a href="per-serviceInfo.html"><i class="icon38 icon m_r_10"></i>服务信息</a>
+									</li>
+									<li>
+										<a href="per-changepassword.html"><i class="icon38 icon m_r_10"></i>密码修改</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">需求订单管理</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="per-myfabuxuqiu.html" class=""><i class="icon38 icon m_r_10"></i>我发布的需求</a>
+									</li>
+									<li>
+										<a href="per-shenqingfuwu.html" class=""><i class="icon38 icon m_r_10"></i>我申请的服务</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">服务订单管理</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="per-myfuwuxinxi.html" class=""><i class="icon38 icon m_r_10"></i>我的服务信息</a>
+									</li>
+									<li>
+										<a href="" class="current"><i class="icon38 icon m_r_10"></i>我承接的服务</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="right help_right t_left" id="mycontent">
+					<p class="name">我承接的服务</p>
+					<div class="clear"></div>
+					<table border="0" cellspacing="0" cellpadding="0" width="100%" class="fuwu_table">
+						<tr class="fuwu_head">
+							<th>服务名称</th>
+							<th>费用</th>
+							<th style="width: 100px;">需求状态<i class="icon61 icon m_l_10"></i></th>
+						</tr>
+						<tr>
+							
+							<td>
+								
+								<p class="fname">
+									<a href="">需求名称</a>
+								</p>
+								<p class="info">
+									服务描述从服务详情的文字介绍中提取内容需具体描述需求具体描述 需求具体描述
+								</p>
+							<p class="time">
+								<span>发布时间：2017-06-12</span>
+								<span class="m_l_10">浏览量：123</span>
+							</p>
+							</td>
+							<td class="price">¥20000</td>
+							<td class="state"><p class="delete"><i class="icon60 icon"></i></p>需求审核中</td>
+						</tr>
+						<tr>
+							
+							<td>
+								
+								<p class="fname">
+									<a href="">需求名称</a>
+								</p>
+								<p class="info">
+									服务描述从服务详情的文字介绍中提取内容需具体描述需求具体描述 需求具体描述
+								</p>
+								<p class="time">
+								<span>发布时间：2017-06-12</span>
+								<span class="m_l_10">浏览量：123</span>
+							</p>
+							</td>
+							<td class="price">¥20000</td>
+							<td class="state"><p class="delete"><i class="icon60 icon"></i></p>服务对接中</td>
+						</tr>
+						<tr>
+							
+							<td>
+								
+								<p class="fname">
+									<a href="">需求名称</a>
+								</p>
+								<p class="info">
+									服务描述从服务详情的文字介绍中提取内容需具体描述需求具体描述 需求具体描述
+								</p>
+								<p class="time">
+								<span>发布时间：2017-06-12</span>
+								<span class="m_l_10">浏览量：123</span>
+							</p>
+							</td>
+							<td class="price">¥20000</td>
+							<td class="state">	<p class="delete"><i class="icon60 icon"></i></p>对接成功</td>
+						</tr>
+						<tr>
+						
+							<td>
+								<p class="fname">
+									<a href="">需求名称</a>
+								</p>
+								<p class="info">
+									服务描述从服务详情的文字介绍中提取内容需具体描述需求具体描述 需求具体描述
+								</p>
+								<p class="time">
+								<span>发布时间：2017-06-12</span>
+								<span class="m_l_10">浏览量：123</span>
+							</p>
+							</td>
+							<td class="price">¥20000</td>
+							<td class="state"><p class="delete"><i class="icon60 icon"></i></p>需求完成</td>
+						</tr>
+
+					</table>
+					<!--如果内容为空开始-->
+					<p class="t_center m_t_30 noinfo">您还没有发布的需求。</p>
+					<!--如果内容为空结束-->
+					<!--翻页开始-->
+					<div class="mypagination t_right m_b_40 m_t_40">
+						<div id="Pagination" class="pagination">
+							<!-- 这里显示分页 -->
+						</div>
+					</div>
+					<!--翻页结束-->
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+		</div>
+		<!--content end-->
+		<!--发布流程开始-->
+		<div class="fabu m_t_40">
+			<div class="content ">
+				<ul>
+					<li style="width: 220px;"><i class="icon32 icon"></i><span>申请／发布所需服务</span></li>
+					<li class="sjt"><i class="icon58 icon"></i></li>
+					<li style="width: 190px;"><i class="icon33 icon"></i><span>平台匹配服务机构</span></li>
+					<li class="sjt"><i class="icon58 icon"></i></li>
+					<li style="width: 160px;"><i class="icon34 icon"></i><span>客服与您联系</span></li>
+					<li class="sjt"><i class="icon58 icon"></i></li>
+					<li style="width: 160px;"><i class="icon35 icon"></i><span>达成商务合作</span></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--发布流程结束-->
+		<!--footer start-->
+		<div class="footer_content"></div>
+		<!--footer end-->
+		<script type="text/javascript" src="js/jquery.pagination.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				//删除
+				$(".delete").click(function(){
+					$(this).parents("tr").remove();
+					
+				});
+				//变色
+				$("table tr:even").css({
+					"background": "#f7f7f7"
+				});
+				//这是一个非常简单的demo实例，让列表元素分页显示
+				//回调函数的作用是显示对应分页的列表项内容
+				//回调函数在用户每次点击分页链接的时候执行
+				//参数page_index{int整型}表示当前的索引页  
+				//参考网址 http://www.zhangxinxu.com/jq/pagination_zh/
+				var initPagination = function() {
+					var num_entries = 12;
+					// 创建分页
+					$("#Pagination").pagination(num_entries, {
+						num_edge_entries: 1, //边缘页数
+						num_display_entries: 4, //主体页数
+						callback: pageselectCallback,
+						items_per_page: 1 //每页显示1项
+					});
+				}();
+
+				function pageselectCallback(page_index, jq) {
+					//		var new_content = $("#hiddenresult div.result:eq("+page_index+")").clone();
+					//		$("#Searchresult").empty().append(new_content); //装载对应分页的内容
+					return false;
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

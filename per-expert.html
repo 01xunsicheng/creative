@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>个人中心-专家</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/globle.js"></script>
+		<style type="text/css">
+			/*.Validform_checktip.Validform_wrong {
+			right: 20px;
+			}*/
+			
+			.Validform_checktip.Validform_right {
+				right: 20px;
+			}
+			
+			.re-input-row label {
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--header start-->
+		<div class="header_content">
+
+		</div>
+		<!--header end-->
+		<!--content start-->
+		<div class="help m_t_30">
+			<div class="content">
+				<div class="left help_left">
+					<div class="h_l_con" id="mymenu">
+						<ul>
+							<li>
+								<a class="" href="">个人中心</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="per-perInfo.html" class="current"><i class="icon38 icon m_r_10"></i>基本信息</a>
+									</li>
+									<li>
+										<a href="per-serviceInfo.html"><i class="icon38 icon m_r_10"></i>服务信息</a>
+									</li>
+									<li>
+										<a href="per-changepassword.html"><i class="icon38 icon m_r_10"></i>密码修改</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">需求订单管理</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="per-myfabuxuqiu.html" class=""><i class="icon38 icon m_r_10"></i>我发布的需求</a>
+									</li>
+									<li>
+										<a href=""><i class="icon38 icon m_r_10"></i>我申请的服务</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="">服务订单管理</a>
+								<ul class="m_l_5 erji_nav">
+									<li>
+										<a href="per-myfuwuxinxi.html" class=""><i class="icon38 icon m_r_10"></i>我的服务信息</a>
+									</li>
+									<li>
+										<a href="per-mychengjiefuwu.html"><i class="icon38 icon m_r_10"></i>我承接的服务</a>
+									</li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<div class="right help_right t_left" id="mycontent">
+					<p class="name">基本信息</p>
+					<div class="m_t_30">
+						<div class="left fwname">个人资料</div>
+						<div class="right">
+							<a href="per-expert-edit.html" class=""><i class="icon59 icon"></i></a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="per_info m_t_40">
+						<label class="label" style="vertical-align: top;">身份</label>
+						<span>个人用户</span>
+						<span class="per_badge">专家</span>
+					</div>
+					<div class="per_info m_t_40">
+						<div class="left"><label class="label " style="vertical-align: top;">个人照片</label></div>
+						<div id="preview">
+							<img class="imghead" src='img/nopic.png'>
+						</div>
+						<p class="uploadanniu">
+							<input type="file" onchange="previewImage(this)" class="btn-file" />
+							<a href="javascript:void(0)" class="btn-change mybtn">修改照片</a>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label" style="vertical-align: top;">姓名</label>
+						<span>某某某</span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">性别</label>
+						<span>男</span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">出生日期</label>
+						<span>1998-10-28</span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">国籍</label>
+						<span>美国</span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">学历</label>
+						<span>本科</span>
+					</div>
+					<hr class="hr_dashed m_t_20" />
+					<div class="m_t_30">
+						<div class="fwname">联系方式</div>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">手机号码</label>
+						<span>13012030000</span>
+						<a href="per-changeTel1.html" class="m_l_10 edit-tel">更换号码</a>
+					</div>
+
+					<div class="per_info m_t_25">
+						<label class="label">电子邮箱</label>
+						<span>13012030000@qq.cm</span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">微信</label>
+						<span>13012030000</span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">QQ</label>
+						<span></span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label" style="vertical-align: top;">通讯地址</label>
+						<span class="per_info_content">
+								通讯地址地址地址一行不超过38个字一行不超过38个字一行不超过38个字一行不超过38
+个字一行不超过38个字。
+</span>
+					</div>
+
+					<hr class="hr_dashed m_t_20" />
+					<div class="m_t_30">
+						<div class="fwname">单位信息</div>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">工作单位</label>
+						<span>某某单位</span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">职称</label>
+						<span>某某职称</span>
+					</div>
+					<div class="per_info m_t_25">
+						<label class="label">职务</label>
+						<span>某职务</span>
+					</div>
+
+					<hr class="hr_dashed m_t_20" />
+					<div class="m_t_30">
+						<div class="fwname">工作经历</div>
+					</div>
+					<!--一个工作开始-->
+					<div class="per_info m_t_25 danwei_name">
+						<label class="label">工作单位</label>
+						<span>某某单位</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">职称</label>
+						<span>某某职称</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">在职时间</label>
+						<span>2012-02-10 至 2017-07-09</span>
+					</div>
+					<!--一个工作结束-->
+					<!--一个工作开始-->
+					<div class="per_info m_t_25 danwei_name">
+						<label class="label">工作单位</label>
+						<span>某某单位</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">职称</label>
+						<span>某某职称</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">在职时间</label>
+						<span>2012-02-10 至 2017-07-09</span>
+					</div>
+					<!--一个工作结束-->
+					<hr class="hr_dashed m_t_20" />
+					<div class="m_t_30">
+						<div class="fwname">教育经历</div>
+					</div>
+					<!--一个学习开始-->
+					<div class="per_info m_t_25 danwei_name">
+						<label class="label">学校名称</label>
+						<span>某某学校</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">学历</label>
+						<span>某某学历</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">毕业时间</label>
+						<span>2012-02-10 至 2017-07-09</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">专业</label>
+						<span>某某专业</span>
+					</div>
+					<!--一个学习结束-->
+					<!--一个学习开始-->
+					<div class="per_info m_t_25 danwei_name">
+						<label class="label">学校名称</label>
+						<span>某某学校</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">学历</label>
+						<span>某某学历</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">毕业时间</label>
+						<span>2012-02-10 至 2017-07-09</span>
+					</div>
+					<div class="per_info m_t_25 m_l_10">
+						<label class="label">专业</label>
+						<span>某某专业</span>
+					</div>
+					<!--一个学习结束-->
+
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--content end-->
+		<div class="m_b_100"></div>
+		<!--footer start-->
+		<div class="footer_content"></div>
+		<!--footer end-->
+		<script type="text/javascript" src="js/file.js"></script>
+	</body>
+
+</html>

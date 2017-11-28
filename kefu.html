@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>首页</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+	</head>
+
+	<body>
+		<!--content start-->
+
+			<div class="message">
+				<!--右边的小会话框开始-->
+				<div class="message-box ">
+					<p class="p_t_20"><img src="img/kefu/kefuicon.png" width="26" /></p>
+					<p class="m_t_5">在线客服</p>
+				</div>
+				<!--右边的小会话框结束-->
+				<!--大会话框开始-->
+				<div class="message-content">
+					<div class="message-content-box">
+						<p class="twobtn"><img src="img/kefu/zx_03.png" class="sxbtn" /><img src="img/kefu/zx_05.png" class="m_l_10 closebtn" /></p>
+						<div class="me-logo">
+							<img src="img/kefu/zx_08.png" width="190" class="left m_r_10" />
+							<div class="left">
+								<p class="online">在线时间：</p>
+								<p class="online" style="margin-top: 1px;">周一至周五 09:00-17:30</p>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="message-xcontent m_t_15">
+							<div class="me_head">
+								<ul>
+									<li class="li_left active">咨询</li>
+									<li class="li_right">留言</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+							<!--第一个tab开始-->
+							<div class="myme_content">
+								<div class="me_content" id="me_content">
+									<!--内容开始-->
+									<div class="me_left">
+										<p class="mm">某某客服<span>14:30:34</span></p>
+										<p class="ly">您好欢迎登陆创新很高兴为您服务请问有什么我可以帮助您的么</p>
+									</div>
+									<div class="me_right text-right">
+										<p class="mm">我<span>14:30:34</span></p>
+										<p class="ly">您好，欢迎登陆e创新，很高兴为您服务，请问有什么我可以帮助您的么？</p>
+									</div>
+									<div class="me_left">
+										<p class="mm">某某客服<span>14:30:34</span></p>
+										<p class="ly">好</p>
+									</div>
+									<div class="me_right text-right">
+										<p class="mm">我<span>14:30:34</span></p>
+										<p class="ly">哈哈哈</p>
+									</div>
+									<div class="me_left">
+										<p class="mm">某某客服<span>14:30:34</span></p>
+										<p class="ly">您好，欢迎登陆e创新，很高兴为您服务，请问有什么</p>
+									</div>
+									<div class="me_right text-right">
+										<p class="mm">我<span>14:30:34</span></p>
+										<p class="ly">您好，欢迎登陆e创新，很高兴为您服务，请问有什么</p>
+									</div>
+									<div class="clear"></div>
+									<p class="ending">由于您长时间未收到您的答复，回话已结束！</p>
+									<!--内容结束-->
+
+								</div>
+								<!--发布内容开始-->
+								<div class="me_bottom">
+									<textarea name="" placeholder="请输入..."></textarea>
+									<div class="right sent-btn">
+										发送
+									</div>
+									<div class="clear"></div>
+								</div>
+								<!--发布内容结束-->
+							</div>
+							<!--第一个tab结束-->
+							<!--第2个tab开始-->
+							<div class="myme_content ">
+								<div class="message-content-box">
+									<p class="me-name"><span class="red">*</span>姓名</p>
+									<p class="me-input"><input type="text" name="" id="" value="" /></p>
+									<p class="me-name"><span class="red">*</span>手机号</p>
+									<p class="me-input"><input type="text" name="" id="" value="" /></p>
+									<p class="me-name">企业名称</p>
+									<p class="me-input"><input type="text" name="" id="" value="" /></p>
+									<p class="me-name"><span class="red">*</span>留言信息</p>
+									<p class="me-input"><textarea name="" rows="" cols=""></textarea></p>
+								</div>
+								<!--发布内容开始-->
+								<div class="right sent-btn">
+									提交
+								</div>
+								<div class="clear"></div>
+								<!--发布内容结束-->
+							</div>
+							<!--第2个tab结束-->
+						</div>
+					</div>
+				</div>
+				<!--大会话框结束-->
+			</div>
+
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//缩小按钮
+				$(".sxbtn").click(function() {
+					$(".message-content").hide(200);
+				});
+				//关闭按钮
+				$(".closebtn").click(function() {
+					$(".message-content").hide(200);
+				});
+				//启动按钮
+				$(".message-box").click(function() {
+					$(".message-content").show(200);
+				});
+				//tab
+				$(".myme_content").eq(0).show().siblings(".myme_content").hide();
+				$(".me_head li").click(function() {
+					$(this).addClass("active").siblings("li").removeClass("active");
+					var index = $(this).index();
+					$(".myme_content").eq(index).show().siblings(".myme_content").hide();
+				});
+
+				$('#me_content').scrollTop($('#me_content')[0].scrollHeight);
+			})
+		
+		</script>
+	</body>
+
+</html>

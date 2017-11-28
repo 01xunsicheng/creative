@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>发布需求</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="css/double-date.css" />
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="js/globle.js"></script>
+		<style type="text/css">
+			.Validform_checktip.Validform_wrong {
+				color: #db4200;
+				position: absolute;
+				left: 510px;
+				top: 37px;
+				background: url(img/icon_03.png) no-repeat center left;
+				padding-left: 20px;
+			}
+			
+			.Validform_checktip.Validform_right {
+				position: absolute;
+				left: 510px;
+				top: 37px;
+			}
+			/*上面的小input*/
+			
+			.zj_input .Validform_checktip.Validform_wrong {
+				color: #db4200;
+				position: absolute;
+				left: 720px;
+				top: 37px;
+				background: url(img/icon_03.png) no-repeat center left;
+				padding-left: 20px;
+			}
+			
+			.zj_input .Validform_checktip.Validform_right {
+				position: absolute;
+				left: 720px;
+				top: 37px;
+			}
+			
+			
+			/*补充*/
+			textarea{
+				color: #a0a2a3;
+				padding: 5px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<!--header start-->
+		<div class="header_content"></div>
+		<!--header end-->
+		<!--content start-->
+		<div class="content ">
+			<div class="fws m_t_60">
+				<p class="name"><span>需求</span>描述</p>
+
+				<form class="m_b_20 fwsform demandform">
+					<p class="fejname m_t_30"><i class="icon54 icon m_r_10"></i>需求信息</p>
+					<div class="fws-input-row m_t_20">
+						<label class="label"><i class="icon52 icon m_r_5"></i>需求名称</label>
+						<input type="text" class="inputxt" placeholder="">
+					</div>
+					<div class="fws-input-row m_t_20">
+						<label class="label"><i class="icon52 icon m_r_5"></i>所属领域</label>
+						<input type="text" class="inputxt" placeholder="">
+					</div>
+					<div class="fws-input-row m_t_20">
+						<label class="label"><i class="icon52 icon m_r_5"></i>所在省市</label>
+						<select name="province" datatype="*" nullmsg="请选择所在省！" errormsg="请选择所在省！">
+							<option value="">请选择省</option>
+							<option value="1">陕西省</option>
+						</select>
+						<select name="province" class="m_l_20" datatype="*" nullmsg="请选择所在城市！" errormsg="请选择所在城市！">
+							<option value="">请选择市</option>
+							<option value="1">西安市</option>
+						</select>
+					</div>
+					<div class="fws-input-row m_t_20">
+						<label class="label"><i class="icon52 icon m_r_5"></i>服务类型</label>
+						<input type="text" class="inputxt" placeholder="">
+					</div>
+					<div class=" m_t_20">
+					<div class="fws-input-row">
+						<label class="label"><i class="icon52 icon m_r_5" ></i>需求周期</label>
+						</div>
+						<!--日期开始-->
+						<div class="outer m_t_10">
+							<div class="date date1 left" id="from">
+								<input type="text" class="date-check" placeholder="起始日期"  />
+							</div>
+							<div class="date left m_l_20" id="to">
+								<input type="text" class="date-check" placeholder="结束日期" />
+							</div>
+						</div>
+						<!--日期结束-->
+						<div class="clear"></div>
+					</div>
+					<div class="fws-input-row demand_add m_t_20">
+						<span class="red y1">¥</span>
+						<span class="red y2">¥</span>
+						<label class="label"><i class="icon52 icon m_r_5"></i>需求预算</label>
+						<input type="text" class="" placeholder="" style="width: 70px;" value=""> 至
+						<input type="text" class="" placeholder="" style="width: 70px;" value="">
+					</div>
+					<div class="zj_input">
+						<div class="fws-input-big-row m_t_20">
+							<label class="label"><i class="icon52 icon m_r_5"></i>需求描述</label>
+							<textarea name="" class="textarea " datatype="*" nullmsg="请填写需求描述！" errormsg="请填写需求描述！"   style="resize:none;"></textarea>
+						</div>
+					</div>
+					<p class="fejname m_t_30"><i class="icon55 icon m_r_10"></i>发布者信息</p>
+					<div class="fws-input-row m_t_20">
+						<label class="label"><i class="icon52 icon m_r_5"></i>联系人</label>
+						<input type="text" class="inputxt" placeholder="">
+					</div>
+					<div class="fws-input-row m_t_20">
+						<label class="label">职务</label>
+						<input type="text" class="" placeholder="">
+					</div>
+					<div class="fws-input-row m_t_20">
+						<label class="label"><i class="icon52 icon m_r_5"></i>电话</label>
+						<input type="text" class="inputxt" placeholder="">
+					</div>
+					<div class="fws-input-row m_t_20">
+						<label class="label">企业名称</label>
+						<input type="text" class="" placeholder="">
+					</div>
+
+					<p class="fws-tijiao m_t_30">
+						<input type="submit" name="" id="" value="提交" />
+					</p>
+				</form>
+			</div>
+		</div>
+		<!--content end-->
+		<!--footer start-->
+		<div class="footer_content"></div>
+		<!--footer end-->
+		<script type="text/javascript" src="js/Validform_v5.3.2.js"></script>
+		<script type="text/javascript" src="js/double-date.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var _html = $("#pro_content").html();
+				$(".addpr").click(function() {
+					$("#pro_content").append(_html);
+				});
+				//提交需求
+
+				var valid = $(".demandform").Validform({ //指明是哪一表单需要验证,名称需加在form表单上;
+					tiptype: 3,
+					label: ".label",
+					showAllError: true,
+					datatype: {
+						"zh1-6": /^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/,
+						"Aa1": /^[A-Za-z0-9]+$/
+					},
+					ajaxPost: true
+				});
+
+				//通过$.Tipmsg扩展默认提示信息;
+				//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
+				valid.tipmsg.w["zh1-6"] = "请输入1到6个中文字符！"; //可以自定义一些消息提示,zh1-6是自定义的datatype
+				valid.addRule([{
+						ele: ".inputxt:eq(0)",
+						datatype: "m",
+						// ajaxurl:"ajax_post.php?/checkname/name=$_GET['name']"//可以写方法检测中文名是否已经存在
+					},
+					{
+						ele: ".inputxt:eq(1)",
+						datatype: "*4-6"
+					},
+					{
+						ele: ".inputxt:eq(2)",
+						datatype: "*4-20"
+					},
+					{
+						ele: ".inputxt:eq(3)",
+						datatype: "*4-20"
+					},
+					{
+						ele: ".inputxt:eq(4)",
+						datatype: "m"
+					}
+				]);
+
+			});
+		</script>
+	</body>
+
+</html>
